@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/card.css';
+import CardItem from './CardItem';
 
 class Card extends Component {
   constructor(props) {
@@ -7,24 +7,12 @@ class Card extends Component {
     this.state = {};
   }
   render() {
+    const { pokemon } = this.props;
     return (
       <div className="Card">
-        <div class="wrapper">
-          <div class="list">
-            <div class="listItem">
-              <img
-                src={require('/Users/DanielCross/Projects/pokemon-store/src/img/abra.svg')}
-                alt="Abra"
-                title="Abra"
-              />
-              <h3 class="listItem__name">Pikachu</h3>
-              <div class="listItem__price">
-                <div class="listItem__priceTxt">$40</div>
-              </div>
-              <div class="listItem__addButton">Add to Card</div>
-            </div>
-          </div>
-        </div>
+        {pokemon.map(pokemon => (
+          <CardItem key={pokemon.name} pokemon={pokemon} />
+        ))}
       </div>
     );
   }
