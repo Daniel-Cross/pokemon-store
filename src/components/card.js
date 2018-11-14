@@ -9,7 +9,7 @@ class Card extends Component {
   render() {
     const { pokemon } = this.props;
     return (
-      <div className="Card">
+      <div className="list">
         {pokemon.map(pokemon => (
           <CardItem key={pokemon.name} pokemon={pokemon} />
         ))}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const EmptyCard = () => {
   return (
-    <div className="EmptyCard">
+    <div className="list--empty">
       <img
         src={require('/Users/DanielCross/Projects/pokemon-store/src/img/razz-berry.svg')}
         alt="raspberry"

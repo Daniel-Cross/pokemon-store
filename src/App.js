@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     const { pokemon } = this.state;
     return (
-      <div className="App">
+      <div className="wrapper">
         {pokemon.length > 0 ? <Card pokemon={pokemon} /> : null}
         {pokemon.length === 0 ? <EmptyCard /> : null}
       </div>
