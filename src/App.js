@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from './components/Card';
 import EmptyCard from './components/EmptyCard';
+import Navbar from './components/Navbar';
 
 class App extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class App extends Component {
     const { pokemon } = this.state;
     return (
       <div className="wrapper">
+        <Navbar />
         {pokemon.length > 0 ? <Card pokemon={pokemon} /> : null}
         {pokemon.length === 0 ? <EmptyCard /> : null}
       </div>
